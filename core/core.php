@@ -1,32 +1,34 @@
 <?php
 class core {
 
-    private $currentController;
-    private $currentAction;
-
     public function  run() {
         $url = substr($_SERVER['PHP_SELF'], 10 );
 
 
         if (!empty($url)) {
-           $url = explode('/', $url);
-           array_shift($url);
-
-           $this->currentContrller = $url[0].'Controller';
+            $url = explode('/', $url);
+            array_shift($url);
+            
+           $currentController = $url[0].'Controller';
            if (isset($url[1])){
-               $this->currentAction = $url[1];
-           } else {
-               $this->currentAction = 'index';
-           }
+                $currentAction = $url[1];
+                
+            } else {
+                $currentAction = 'index';
+            }
 
         } else {
-            $this->currentController = 'homeController';
-            $this->currentAction = 'index';
-        }
+            $currentController = 'homeController';
+            $currentAction = 'index';
 
-        echo "controller:".$this->currentController;
-        echo "<br>action:".$this->currentAction;
+            
+        }
+            require_once 'core/controller.php';
+            $c = new $currentController();
+            $c->$currentAction();
     }
+    
+
 }
 
 
