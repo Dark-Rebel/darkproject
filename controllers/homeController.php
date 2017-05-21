@@ -8,8 +8,14 @@ class homeController extends controller {
 
         $dados = array ( 'name' => $usuario->getName() );
 
-        $this->loadView('home', $dados);
+        $this->loadTemplate('home', $dados);
     }
+
+    public function sobre(){
+        $dados = array();
+        $this->loadTemplate('sobre', $dados);
+    }
+
 }
 
 ?>
