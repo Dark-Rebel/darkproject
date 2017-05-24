@@ -1,4 +1,5 @@
 <?php
+
 class usuario {
 
     private $name;
@@ -7,13 +8,12 @@ class usuario {
 
         $this->name = $nome;
     }
-    
+
     public function getName() {
 
         return $this->name;
     }
 
 }
-
 
 ?>

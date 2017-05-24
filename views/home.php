@@ -1,1 +1,1 @@
-<h1> Iaee <?php echo $name; ?></h1>
+<h1> Iaee</h1>
