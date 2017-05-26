@@ -32,46 +32,128 @@ if (isset($_POST['senado']) or
     $grepo->getResultado();
 }
 ?>
-
 <form method="POST">
-
-    <table>
-        <tr>
-            <td>Senado:</td> 
-            <td><input type="number" name="senado" min="1" max="25"></td>
-        </tr>
-        <tr>
-            <td>Fazenda: </td> 
-            <td><input type="number" name="fazenda" min="1" max="45"></td> 
-            <td>Armazém: </td> 
-            <td><input type="number" name="armazem" min="1" max="35"></td> 
-            <td>Academia: </td> 
-            <td><input type="number" name="academia" min="0" max="36"></td> 
-            <td>Serraria: </td> 
-            <td><input type="number" name="serraria" min="0" max="40"></td> 
-        </tr>
-        <tr>
-            <td>Pedreira: </td> 
-            <td><input type="number" name="pedreira" min="0" max="40"></td> 
-            <td>Mina: </td>
-            <td><input type="number" name="mina" min="0" max="40"></td>
-            <td>Mercado: </td>
-            <td><input type="number" name="mercado" min="0" max="30"></td>
-            <td>Templo: </td>
-            <td><input type="number" name="templo" min="0" max="30"></td>
-        </tr>
-        <tr>
-            <td>Quartel: </td>
-            <td><input type="number" name="quartel" min="0" max="30"></td>
-            <td>Porto: </td>
-            <td><input type="number" name="porto" min="0" max="30"></td>
-            <td>Muralha: </td>
-            <td><input type="number" name="muralha" min="0" max="25"></td>
-            <td>Gruta: </td>
-            <td><input type="number" name="gruta" min="0" max="10"></td>
-        </tr>
-        <tr>
-            <td colspan="2"><input type="submit" name="enviar"></td>
-        </tr>
-    </table>
+    <div class="area1">
+        <div class="titulo">Edifícios</div>
+        <div class="boxDivisor">
+            <div class="boxEdificil" id="senado">
+                <div class="boxEdificilN">
+                    <input type="number" name="senado" min="1" max="25">
+                </div>
+                <div class="boxEdificilT">
+                    Senado
+                </div>
+            </div>
+        </div>
+        <div class="boxDivisor">
+            <div class="boxEdificil">
+                <div class="boxEdificilN">
+                    <input type="number" name="serraria" min="0" max="40">
+                </div>
+                <div class="boxEdificilT">
+                    Serraria
+                </div>
+            </div>
+            <div class="boxEdificil">
+                <div class="boxEdificilN">
+                    <input type="number" name="fazenda" min="1" max="45">
+                </div>
+                <div class="boxEdificilT">
+                    Fazenda
+                </div>
+            </div>
+            <div class="boxEdificil">
+                <div class="boxEdificilN">
+                    <input type="number" name="pedreira" min="0" max="40">
+                </div>
+                <div class="boxEdificilT">
+                    Pedreira
+                </div>
+            </div>
+            <div class="boxEdificil">
+                <div class="boxEdificilN">
+                    <input type="number" name="armazem" min="1" max="35">
+                </div>
+                <div class="boxEdificilT">
+                    Armazém
+                </div>
+            </div>
+        </div>
+        <div class="boxDivisor">
+            <div class="boxEdificil">
+                <div class="boxEdificilN">
+                    <input type="number" name="mina" min="0" max="40">
+                </div>
+                <div class="boxEdificilT">
+                    Mina
+                </div>
+            </div>
+            <div class="boxEdificil">
+                <div class="boxEdificilN">
+                    <input type="number" name="quartel" min="0" max="30">
+                </div>
+                <div class="boxEdificilT">
+                    Quartel
+                </div>
+            </div>
+            <div class="boxEdificil">
+                <div class="boxEdificilN">
+                    <input type="number" name="templo" min="0" max="30">
+                </div>
+                <div class="boxEdificilT">
+                    Templo
+                </div>
+            </div>
+            <div class="boxEdificil">
+                <div class="boxEdificilN">
+                    <input type="number" name="mercado" min="0" max="30">
+                </div>
+                <div class="boxEdificilT">
+                    Mercado
+                </div>
+            </div>
+        </div>
+        <div class="boxDivisor">
+            <div class="boxEdificil">
+                <div class="boxEdificilN">
+                    <input type="number" name="porto" min="0" max="30">
+                </div>
+                <div class="boxEdificilT">
+                    Porto
+                </div>
+            </div>
+            <div class="boxEdificil">
+                <div class="boxEdificilN">
+                    <input type="number" name="academia" min="0" max="36">
+                </div>
+                <div class="boxEdificilT">
+                    Academia
+                </div>
+            </div>
+            <div class="boxEdificil">
+                <div class="boxEdificilN">
+                    <input type="number" name="muralha" min="0" max="25">
+                </div>
+                <div class="boxEdificilT">
+                    Muralha
+                </div>
+            </div>
+            <div class="boxEdificil">
+                <div class="boxEdificilN">
+                    <input type="number" name="gruta" min="0" max="10">
+                </div>
+                <div class="boxEdificilT">
+                    Gruta
+                </div>
+            </div>
+        </div>
+        <div class="boxDivisor">
+            <input type="submit" name="enviar" value="Calcular">
+            <input type="reset" name="enviar" value="Limpar">
+        </div>
+    </div>
+    <div class="area2">
+        <div class="titulo">Resultado</div>
+        <div class="resultado"></div>
+    </div>
 </form>

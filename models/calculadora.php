@@ -15,6 +15,7 @@ class calculadora {
     private $academia;
     private $muralha;
     private $gruta;
+    private $populacao;
 
     public function setSenado($temp) {
         switch ($temp) {
@@ -69,7 +70,6 @@ class calculadora {
             case 25: $temp = 125.0;
                 break;
         }
-
         $this->senado = $temp;
     }
 
@@ -160,6 +160,98 @@ class calculadora {
     }
 
     public function setFazenda($temp) {
+        switch ($temp) {
+            case 1: $this->populacao = 14;
+                break;
+            case 2: $this->populacao = 38;
+                break;
+            case 3: $this->populacao = 69;
+                break;
+            case 4: $this->populacao = 105;
+                break;
+            case 5: $this->populacao = 145;
+                break;
+            case 6: $this->populacao = 189;
+                break;
+            case 7: $this->populacao = 237;
+                break;
+            case 8: $this->populacao = 288;
+                break;
+            case 9: $this->populacao = 342;
+                break;
+            case 10: $this->populacao = 399;
+                break;
+            case 11: $this->populacao = 458;
+                break;
+            case 12: $this->populacao = 520;
+                break;
+            case 13: $this->populacao = 584;
+                break;
+            case 14: $this->populacao = 651;
+                break;
+            case 15: $this->populacao = 720;
+                break;
+            case 16: $this->populacao = 790;
+                break;
+            case 17: $this->populacao = 863;
+                break;
+            case 18: $this->populacao = 938;
+                break;
+            case 19: $this->populacao = 1015;
+                break;
+            case 20: $this->populacao = 1094;
+                break;
+            case 21: $this->populacao = 1174;
+                break;
+            case 22: $this->populacao = 1257;
+                break;
+            case 23: $this->populacao = 1341;
+                break;
+            case 24: $this->populacao = 1426;
+                break;
+            case 25: $this->populacao = 1514;
+                break;
+            case 26: $this->populacao = 1602;
+                break;
+            case 27: $this->populacao = 1693;
+                break;
+            case 28: $this->populacao = 1785;
+                break;
+            case 29: $this->populacao = 1878;
+                break;
+            case 30: $this->populacao = 1.973;
+                break;
+            case 31: $this->populacao = 2070;
+                break;
+            case 32: $this->populacao = 2168;
+                break;
+            case 33: $this->populacao = 2267;
+                break;
+            case 34: $this->populacao = 2368;
+                break;
+            case 35: $this->populacao = 2470;
+                break;
+            case 36: $this->populacao = 2573;
+                break;
+            case 37: $this->populacao = 2678;
+                break;
+            case 38: $this->populacao = 2784;
+                break;
+            case 39: $this->populacao = 2891;
+                break;
+            case 40: $this->populacao = 3000;
+                break;
+            case 41: $this->populacao = 3109;
+                break;
+            case 42: $this->populacao = 3220;
+                break;
+            case 43: $this->populacao = 3332;
+                break;
+            case 44: $this->populacao = 3446;
+                break;
+            case 45: $this->populacao = 3560;
+                break;
+        }
         $temp = 0;
         $this->fazenda = $temp;
     }
@@ -404,7 +496,6 @@ class calculadora {
             case 30: $temp = 83.2;
                 break;
         }
-
         $this->quartel = $temp;
     }
 
@@ -537,7 +628,6 @@ class calculadora {
             case 30: $temp = 84.3;
                 break;
         }
-
         $this->mercado = $temp;
     }
 
@@ -682,7 +772,6 @@ class calculadora {
             case 36: $temp = 108;
                 break;
         }
-
         $this->academia = $temp;
     }
 
@@ -770,7 +859,11 @@ class calculadora {
 
     public function getResultado() {
 
-        echo $this->muralha + $this->gruta + $this->academia + $this->porto + $this->mercado + $this->templo + $this->quartel + $this->mina + $this->armazem + $this->pedreira + $this->fazenda + $this->serraria + $this->senado + 120;
+        $gasto = ceil($this->muralha + $this->gruta + $this->academia + $this->porto + $this->mercado + $this->templo + $this->quartel + $this->mina + $this->armazem + $this->pedreira + $this->fazenda + $this->serraria + $this->senado + 120);
+        $porcentagem = 10.0 / 100.0;
+        $this->populacao = $this->populacao + $this->populacao * $porcentagem;
+        $this->populacao = $this->populacao + 200;
+        echo $this->populacao - $gasto;
     }
 
 }
